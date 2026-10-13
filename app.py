@@ -56,12 +56,12 @@ if uploaded_file is not None:
         st.image(image, caption="Uploaded Image", use_container_width=True)
         
     with col2:
-        st.write("⚙️ **Processing Status:** Image uploaded successfully. Ready to analyze.")
-        run_prediction = st.button("🚀 Classify Galaxy Shape", type="primary")
+        st.write(" **Processing Status:** Image uploaded successfully. Ready to analyze.")
+        run_prediction = st.button(" Classify Galaxy Shape", type="primary")
 
     # --- KHI BẤM NÚT DỰ ĐOÁN ---
     if run_prediction:
-        with st.spinner("Analyzing morphology... Please wait..."):
+        with st.spinner("Analyzing... Please wait..."):
             try:
                 # Lưu tạm ảnh để hàm load_image_for_model xử lý giống cấu trúc cũ của bạn
                 temp_path = "temp_uploaded_img.png"
