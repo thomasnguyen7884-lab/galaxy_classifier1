@@ -10,11 +10,11 @@ from predict import load_classes, load_model_any, load_image_for_model, is_end2e
 # --- CẤU HÌNH GIAO DIỆN WEB ---
 st.set_page_config(
     page_title="Galaxy Classifier Deep Learning Project",
-    page_icon="🌌",
+    page_icon="🚀",
     layout="centered"
 )
 
-st.title("🌌 Galaxy Morphology Classifier")
+st.title("Galaxy Classifier")
 st.write("This interactive web app uses Deep Learning to classify galaxy shapes. Upload an image to see the model's prediction.")
 
 # --- TỰ ĐỘNG LOAD MODEL & CLASSES ---
@@ -89,7 +89,7 @@ if uploaded_file is not None:
                 
                 # --- HIỂN THỊ KẾT QUẢ TƯƠNG TÁC ---
                 st.subheader("2. Classification Results")
-                st.success(f"🏆 **Prediction:** **{pred_class}** ({confidence:.1f}% Confidence)")
+                st.success(f" **Prediction:** **{pred_class}** ({confidence:.1f}% Confidence)")
                 
                 # Vẽ biểu đồ cột xác suất bằng Matplotlib chuẩn Streamlit
                 fig, ax = plt.subplots(figsize=(6, 3))
